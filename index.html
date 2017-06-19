@@ -7,6 +7,27 @@
 </head>
 <body>
     <div id="app"><%= body %></div>
-    <script src="/public/bundle.js"></script>
+    <script src="node_modules/react/react.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+
+    <script>
+      var div = React.DOM.div;
+      var h1 = React.DOM.h1;
+
+      var component1 = React.createClass({
+        render: function() {
+          return (
+            div(null,
+              h1(null, 'something is here'))
+          )
+        }
+      });
+
+      ReactDOM.render(React.createElement(component1), document.getElementById('app'));
+
+
+
+
+    </script>
 </body>
 </html>
